@@ -1,7 +1,7 @@
 print('Starting spam bot')
 import telebot
 import random as r
-import pause
+import time
 user_id = 0
 loop = 0
 is_spamming = 0
@@ -10,7 +10,7 @@ print('Spam bot started')
 
 def spam():
     bot.send_message(user_id, r.randint(10000000, 99999999))
-    pause.seconds(1)
+   time.sleep(1)
 
 @bot.message_handler(commands=['start'])
 def start_message(message):
